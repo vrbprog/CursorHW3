@@ -14,11 +14,6 @@ public class Fractions {
         pointPart = (short) d;
     }
 
-    private Fractions(long integerPart, short pointPart) {
-        this.integerPart = integerPart;
-        this.pointPart = pointPart;
-    }
-
     public long getIntegerPart() {
         return integerPart;
     }
