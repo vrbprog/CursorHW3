@@ -67,8 +67,8 @@ public class Fractions {
     @Override
     public String toString() {
         return integerPart + "." + (pointPart > 9 ? pointPart :
-                                   (pointPart > 0 ? "0" + pointPart :
-                                   (pointPart < -9 ? pointPart * (-1) : "0" + pointPart * (-1))));
+                (pointPart > 0 ? "0" + pointPart :
+                        (pointPart < -9 ? pointPart * (-1) : "0" + pointPart * (-1))));
     }
 
 }

@@ -35,7 +35,24 @@ public class Main {
         double kurs = 28.26;
         Fractions dollars = new Fractions(dol);
         Fractions kursDol = new Fractions(kurs);
-        System.out.println(dol + " $ is " + Fractions.multFractions(dollars, kursDol) + " UAH");
+        System.out.println(dol + " $ is " + Fractions.multFractions(dollars, kursDol) + " UAH\n\r");
 
+        //Task 5
+        Money moneyOne = new Money(254.09);
+        System.out.println("Money moneyOne is : " + moneyOne);
+        Money moneyTwo = new Money(254.0943);
+        System.out.println("Money moneyTwo is : " + moneyTwo);
+        System.out.println("moneyOne.equals(moneyTwo) is : " + moneyOne.equals(moneyTwo));
+        Money moneyThree = new Money(-16.34);
+        System.out.println("Money moneyThree is : " + moneyThree);
+        System.out.println("moneyOne + moneyThree = " + Money.sumMoney(moneyOne, moneyThree));
+        System.out.println("moneyOne - moneyThree = " + Money.subMoney(moneyOne, moneyThree));
+        Money moneyUah = new Money(3493.22);
+        Money moneyUsa = new Money(28.26);
+        System.out.println("moneyUah / moneyUsa = " + Money.divMoney(moneyUah, moneyUsa));
+        double euroKurs = 33.48;
+        System.out.println("moneyUah / euroKurs = " + Money.divMoney(moneyUah, euroKurs));
+        Money moneyEuro = new Money(167.26);
+        System.out.println("moneyEuro * euroKurs = " + Money.multMoney(moneyEuro, euroKurs));
     }
 }
