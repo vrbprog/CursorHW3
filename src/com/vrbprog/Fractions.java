@@ -28,23 +28,19 @@ public class Fractions {
     }
 
     public static Fractions sumFractions(Fractions f1, Fractions f2) {
-        long sumIntegerPart = f1.integerPart + f2.integerPart;
-        short sumPointPart = (short) (f1.pointPart + f2.pointPart);
-        if (sumPointPart > 99) {
-            sumIntegerPart++;
-            sumPointPart -= 100;
-        }
-        return new Fractions(sumIntegerPart, sumPointPart);
+        long firstFraction = f1.integerPart * 100L + f1.pointPart;
+        long secondFraction = f2.integerPart * 100L + f2.pointPart;
+        long result = firstFraction + secondFraction;
+        double dRes = result / 100.0;
+        return new Fractions(dRes);
     }
 
     public static Fractions subFractions(Fractions f1, Fractions f2) {
-        long sumIntegerPart = f1.integerPart - f2.integerPart;
-        short sumPointPart = (short) (f1.pointPart - f2.pointPart);
-        if (sumPointPart < 0) {
-            sumIntegerPart--;
-            sumPointPart += 100;
-        }
-        return new Fractions(sumIntegerPart, sumPointPart);
+        long firstFraction = f1.integerPart * 100L + f1.pointPart;
+        long secondFraction = f2.integerPart * 100L + f2.pointPart;
+        long result = firstFraction - secondFraction;
+        double dRes = result / 100.0;
+        return new Fractions(dRes);
     }
 
     public static Fractions multFractions(Fractions f1, Fractions f2) {
@@ -75,7 +71,9 @@ public class Fractions {
 
     @Override
     public String toString() {
-        return integerPart + "." + (pointPart > 9 ? pointPart : "0" + pointPart);
+        return integerPart + "." + (pointPart > 9 ? pointPart :
+                                   (pointPart > 0 ? "0" + pointPart :
+                                   (pointPart < -9 ? pointPart * (-1) : "0" + pointPart * (-1))));
     }
 
 }

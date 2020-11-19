@@ -22,7 +22,7 @@ public class Main {
         System.out.println(car2);
 
         // Task 4
-        Fractions f = new Fractions(123.656);
+        Fractions f = new Fractions(-123.056);
         System.out.println("\n\rFractions f : " + f);
         Fractions ff = new Fractions(45.361);
         System.out.println("Fractions ff : " + ff);
