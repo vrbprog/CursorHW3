@@ -27,6 +27,8 @@ public class Main {
         Fractions ff = new Fractions(45.361);
         System.out.println("Fractions ff : " + ff);
         System.out.println("f.equals(ff) is : " + f.equals(ff));
+        Fractions fff = new Fractions(45.364);
+        System.out.println("fff.equals(ff) is : " + fff.equals(ff));
         System.out.println("Sum f and ff is : " + Fractions.sumFractions(f, ff));
         System.out.println("Sub f from ff is :" + Fractions.subFractions(ff, f));
         double dol = 123.61;
